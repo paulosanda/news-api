@@ -12,7 +12,7 @@ class NewsApiController extends Controller
         $subject = 'sources=techcrunch';
 
         $articles = app(GetArticles::class)->execute($endpoint, $subject);
-        // dd($articles['articles']);
+
         return view('news', compact('articles'));
     }
 }
